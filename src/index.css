@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #F2F2F7;
+  --surface: #FFFFFF;
+  --surface-raised: #FFFFFF;
+  --fill: rgba(118, 118, 128, 0.12);
+  --label: #000000;
+  --label-2: rgba(60, 60, 67, 0.60);
+  --label-3: rgba(60, 60, 67, 0.30);
+  --separator: #C6C6C8;
+  --accent: #30B566;
+  --accent-soft: rgba(48, 181, 102, 0.14);
+  --over: #FF6259;
+  --destructive: #FF3B30;
+  --gold: #FFB800;
+  --button-bg: #000000;
+  --button-label: #FFFFFF;
+
+  --color-transport: #007AFF;
+  --color-data: #30B0C7;
+  --color-food: #FF9500;
+  --color-other: #8E8E93;
+}
+
+[data-theme="dark"],
+.dark {
+  --bg: #000000;
+  --surface: #1C1C1E;
+  --surface-raised: #2C2C2E;
+  --fill: rgba(118, 118, 128, 0.24);
+  --label: #FFFFFF;
+  --label-2: rgba(235, 235, 245, 0.60);
+  --label-3: rgba(235, 235, 245, 0.30);
+  --separator: #38383A;
+  --accent: #3CD070;
+  --accent-soft: rgba(60, 208, 112, 0.20);
+  --over: #FF7A72;
+  --destructive: #FF453A;
+  --gold: #FFD60A;
+  --button-bg: #FFFFFF;
+  --button-label: #000000;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--label);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Inter", system-ui, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+  overscroll-behavior-y: none;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Prevent iOS auto-zoom on input focus: min font-size 17px */
+input, textarea, select {
+  font-size: 17px !important;
+}
+
+/* Hairline borders without drop shadows per calm rules */
+.hairline-border {
+  border: 0.5px solid var(--separator);
+}
+.hairline-b {
+  border-bottom: 0.5px solid var(--separator);
+}
+.hairline-t {
+  border-top: 0.5px solid var(--separator);
+}
+
+/* Safe areas */
+.pb-safe {
+  padding-bottom: max(16px, env(safe-area-inset-bottom, 16px));
+}
+.pt-safe {
+  padding-top: max(12px, env(safe-area-inset-top, 12px));
+}

@@ -1,0 +1,6 @@
+{
+  "name": "RoCash",
+  "description": "Mobile-first web app for tracking daily spending and savings calmly.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
